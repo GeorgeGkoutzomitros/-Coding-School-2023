@@ -26,14 +26,18 @@ namespace Session_05
 				for (i = 1; i<= n; i++) 
 				{
 					sum = sum + i;
+					
 				}
+				Console.WriteLine(sum);
 			}
 			if ( chooseCompute == "p") {
 
 				for (i = 1; i <= n;i++)
 				{
 					product = product * i;
+					Console.WriteLine(product);
 				}
+				Console.WriteLine(product);
 			}
 			
 		}
