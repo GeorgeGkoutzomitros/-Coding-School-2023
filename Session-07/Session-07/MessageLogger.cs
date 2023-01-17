@@ -8,5 +8,9 @@ namespace Session_07
 {
 	public class MessageLogger
 	{
+		//properties 
+		public Message[] Messages { get; set; }	
+
+
 	}
 }
