@@ -12,31 +12,19 @@ namespace Session_07
 		//properties
 		public Guid ID { get; set; }
 		public DateTime TimeStamp { get; set; }
-		public string Messages { get; set; }
+		public string Text { get; set; }
 
 		//contructors
 		public Message()
 		{
-
+			ID = Guid.NewGuid();
 		}
 
-		public Message(Guid id)
+		public Message(string text)
 		{
-			ID = id;
-		}
-
-		public Message(Guid id, DateTime stamp)
-		{
-			ID = id;
-			TimeStamp = stamp;
-		}
-
-		public Message(Guid id, DateTime stamp, string messages) {
-
-			ID = id;
-			TimeStamp = stamp;
-			Messages = messages;
-
+			ID = Guid.NewGuid();
+			TimeStamp = DateTime.Now;
+			Text = text;
 		}
 
 	}	

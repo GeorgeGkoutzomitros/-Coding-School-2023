@@ -8,44 +8,24 @@ using System.Threading.Tasks;
 
 namespace Session_07
 {
-	public enum ActionEnum
+
+	public class ActionEntity
 	{
-		Convert,
-		Uppercase,
-		Reverse
+
+		public Guid RequestID { get; set; }
 	}
 
-	public class ActionRequest
+	public class ActionRequest : ActionEntity
 	{
-		//properties 
-		public Guid RequestID { get; set; }
+
 		public string Input { get; set; }
-		public ActionEnum Action {  get; set; }
+		public ActionEnum Action { get; set; }
 
-		//method
-		public string Calculate(ActionEnum action, string Input) {
-		
-			switch (action)
-			{
-				case ActionEnum.Convert:
-					return Convert.ToString(Input);
-
-				case ActionEnum.Uppercase:
-					return Input.ToUpper();
-
-
-				case ActionEnum.Reverse:
-					return Input;
-
-				default:
-					Console.WriteLine("please select another type");
-					break;
-
-			}
-
+		public ActionRequest()
+		{
+			RequestID = Guid.NewGuid();
 		}
 
-				
-
 	}
+
 }
