@@ -23,7 +23,7 @@ namespace Session_06
 
 		}
 
-		public void GetName() {
+		public override void GetName() {
 		
 		}
 

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Session_06
 {
-	public class University
+	public class University : Institute
 	{
 
 		//properties

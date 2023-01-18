@@ -38,7 +38,7 @@ namespace Session_06
 		}
 
 		//methods
-		public void GetName()
+		public virtual void GetName()
 		{
 
 		}
