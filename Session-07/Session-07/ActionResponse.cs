@@ -8,8 +8,8 @@ namespace Session_07
 {
 	public class ActionResponse : ActionEntity
 	{
-		//properties 
 
+		//properties 
 		public Guid ResponseID { get; set; }
 		public string Output { get; set; }
 

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml.Linq;
 
 namespace Session_07
 {
@@ -26,12 +27,20 @@ namespace Session_07
 
 		public override string Manipulate()
 		{
+			string result = string.Empty;
 
-			// “Convert” you must check if the Input is a decimal number and convert it to binary.
-			// ...
+			int num = Convert.ToInt32(Text);
+			result = "";
+			while (num > 1)
+			{
+				int remainder = num % 2;
+				result = Convert.ToString(remainder) + result;
+				num /= 2;
+			}
+			result = Convert.ToString(num) + result;
+			//Console.WriteLine("Binary: {0}", result);
 
-
-			return string.Empty;
+			return result;
 		}
 	}
 
@@ -41,7 +50,15 @@ namespace Session_07
 		public override string Manipulate()
 		{
 
-			return string.Empty;
+			string reverseString = string.Empty;
+
+			for (int i = Text.Length - 1; i >= 0; i--)
+			{
+				reverseString += Text[i];
+			}
+
+			return reverseString;
+
 		}
 
 	}
@@ -51,8 +68,13 @@ namespace Session_07
 
 		public override string Manipulate()
 		{
+			
+			
 
-			return string.Empty;
+				return string.Empty.ToUpper();
+			
+
+			
 		}
 	}
 }

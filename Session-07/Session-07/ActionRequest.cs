@@ -18,6 +18,7 @@ namespace Session_07
 	public class ActionRequest : ActionEntity
 	{
 
+		//properties
 		public string Input { get; set; }
 		public ActionEnum Action { get; set; }
 

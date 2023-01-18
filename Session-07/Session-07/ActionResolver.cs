@@ -16,16 +16,16 @@ namespace Session_07
 
 	public class ActionResolver
 	{
-		// PROPERTIES
+		//properties
 		public MessageLogger Logger { get; set; }
 
-		// CTOR
+		//ctor
 		public ActionResolver()
 		{
 			Logger = new MessageLogger();
 		}
 
-		// METHODS
+		//methods
 		public ActionResponse Execute(ActionRequest request)
 		{
 
@@ -56,7 +56,7 @@ namespace Session_07
 						break;
 
 					default:
-						// TODO: ERRORMESSAGE!
+						Console.WriteLine("please select another type");
 						break;
 				}
 			}

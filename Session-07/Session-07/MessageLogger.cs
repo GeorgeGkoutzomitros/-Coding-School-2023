@@ -9,19 +9,18 @@ namespace Session_07
 	public class MessageLogger
 	{
 		//properties 
-		//  PROPERTIES
 		public Message[] Messages { get; set; }
 
 		private int _messageCounter = 0;
 
-		// CTOR
+		//ctor
 		public MessageLogger()
 		{
 			Messages = new Message[1000];
 		}
 
 
-		// METHODS
+		//methods
 		public void ReadAll()
 		{
 			foreach (Message message in Messages)

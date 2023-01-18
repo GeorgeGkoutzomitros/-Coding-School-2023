@@ -14,7 +14,7 @@ namespace Session_07
 		public DateTime TimeStamp { get; set; }
 		public string Text { get; set; }
 
-		//contructors
+		//ctor
 		public Message()
 		{
 			ID = Guid.NewGuid();

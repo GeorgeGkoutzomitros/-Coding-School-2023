@@ -4,8 +4,8 @@ using Session_07;
 
 ActionRequest request = new ActionRequest()
 {
-	Input = "Fotis",
-	Action = ActionEnum.Reverse
+	//Input = "Fotis",
+	//Action = ActionEnum.Reverse
 };
 
 ActionResponse response = new ActionResponse();
