@@ -26,16 +26,17 @@ namespace Session_09
 			InitializeComponent();
 		}
 
-		//button14 equal to Division
-		private void button14_Click(object sender, EventArgs e)
-		{
-			ctrlDisplay.Text += " / ";
-			_calcOperation = CalcOperation.Division;
-		}
-
 		private void ctrlAddition_Click(object sender, EventArgs e)
 		{
+
+		
+
 			ctrlDisplay.Text += " + ";
+
+			//I disable the + button and i enable it again after pressing = (78 line). I do not have the time to fix it more
+			ctrlAddition.Enabled = false;
+			
+
 			_calcOperation = CalcOperation.Addition;
 		}
 
@@ -51,6 +52,13 @@ namespace Session_09
 			_calcOperation = CalcOperation.Multiplication;
 		}
 
+		//button14 equal to Division
+		private void button14_Click(object sender, EventArgs e)
+		{
+			ctrlDisplay.Text += " / ";
+			_calcOperation = CalcOperation.Division;
+		}
+
 		private void ctrlRaiseToPower_Click(object sender, EventArgs e)
 		{
 			ctrlDisplay.Text += " ^ ";
@@ -63,34 +71,12 @@ namespace Session_09
 			_calcOperation = CalcOperation.SquareRoot;
 		}
 
-		private void ChooseNumber(decimal number)
-		{
-
-			if (_result != null)
-			{
-
-				ctrlDisplay.Text = string.Empty;
-				_value1 = null;
-				_value2 = null;
-				_result = null;
-			}
-
-
-			if (_value1 == null)
-			{
-				_value1 = number;
-			}
-			else
-			{
-				_value2 = number;
-			}
-
-		}
-		
-
 		private void ctrlEqual_Click(object sender, EventArgs e)
 		{
+
 			ctrlDisplay.Text += " = ";
+			//testing enable and disable the + button
+			ctrlAddition.Enabled = true;
 
 			switch (_calcOperation)
 			{
@@ -135,6 +121,31 @@ namespace Session_09
 
 			ctrlDisplay.Text += _result;
 		}
+
+		private void ChooseNumber(decimal number)
+		{
+
+			if (_result != null)
+			{
+
+				ctrlDisplay.Text = string.Empty;
+				_value1 = null;
+				_value2 = null;
+				_result = null;
+			}
+
+
+			if (_value1 == null)
+			{
+				_value1 = number;
+			}
+			else
+			{
+				_value2 = number;
+			}
+
+		}
+
 
 		private void btnOne_Click(object sender, EventArgs e)
 		{
