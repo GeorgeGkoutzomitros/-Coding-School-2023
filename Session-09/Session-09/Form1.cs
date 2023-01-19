@@ -26,6 +26,7 @@ namespace Session_09
 			InitializeComponent();
 		}
 
+		//button14 equal to Division
 		private void button14_Click(object sender, EventArgs e)
 		{
 			ctrlDisplay.Text += " / ";
@@ -127,10 +128,35 @@ namespace Session_09
 					break;
 
 				default:
+					Console.WriteLine("Wrong input");
 					break;
 			}
 
 			ctrlDisplay.Text += _result;
+		}
+
+		private void btnTwo_Click(object sender, EventArgs e)
+		{
+
+			if (_result != null)
+			{
+
+				ctrlDisplay.Text = string.Empty;
+				_value1 = null;
+				_value2 = null;
+				_result = null;
+			}
+
+			ctrlDisplay.Text += "2";
+
+			if (_value1 == null)
+			{
+				_value1 = 2;
+			}
+			else
+			{
+				_value2 = 2;
+			}
 		}
 	}
 }
