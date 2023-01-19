@@ -63,7 +63,7 @@ namespace Session_09
 			_calcOperation = CalcOperation.SquareRoot;
 		}
 
-		private void btnOne_Click(object sender, EventArgs e)
+		private void ChooseNumber(decimal number)
 		{
 
 			if (_result != null)
@@ -75,17 +75,18 @@ namespace Session_09
 				_result = null;
 			}
 
-			ctrlDisplay.Text += "1";
 
 			if (_value1 == null)
 			{
-				_value1 = 1;
+				_value1 = number;
 			}
 			else
 			{
-				_value2 = 1;
+				_value2 = number;
 			}
+
 		}
+		
 
 		private void ctrlEqual_Click(object sender, EventArgs e)
 		{
@@ -135,28 +136,67 @@ namespace Session_09
 			ctrlDisplay.Text += _result;
 		}
 
+		private void btnOne_Click(object sender, EventArgs e)
+		{
+
+			ChooseNumber(1);
+			ctrlDisplay.Text += "1";
+		}
+
 		private void btnTwo_Click(object sender, EventArgs e)
 		{
 
-			if (_result != null)
-			{
-
-				ctrlDisplay.Text = string.Empty;
-				_value1 = null;
-				_value2 = null;
-				_result = null;
-			}
-
+			ChooseNumber(2);
 			ctrlDisplay.Text += "2";
+		}
 
-			if (_value1 == null)
-			{
-				_value1 = 2;
-			}
-			else
-			{
-				_value2 = 2;
-			}
+		private void btnThree_Click(object sender, EventArgs e)
+		{
+
+			ChooseNumber(3);
+			ctrlDisplay.Text += "3";
+		}
+
+		private void btnFour_Click(object sender, EventArgs e)
+		{
+
+			ChooseNumber(4);
+			ctrlDisplay.Text += "4";
+		}
+
+		private void btnFive_Click(object sender, EventArgs e)
+		{
+
+			ChooseNumber(5);
+			ctrlDisplay.Text += "5";
+		}
+
+		private void btnSix_Click(object sender, EventArgs e)
+		{
+
+			ChooseNumber(6);
+			ctrlDisplay.Text += "6";
+		}
+
+		private void btnSeven_Click(object sender, EventArgs e)
+		{
+
+			ChooseNumber(7);
+			ctrlDisplay.Text += "7";
+		}
+
+		private void btnEight_Click(object sender, EventArgs e)
+		{
+
+			ChooseNumber(8);
+			ctrlDisplay.Text += "8";
+		}
+
+		private void btnNine_Click(object sender, EventArgs e)
+		{
+
+			ChooseNumber(9);
+			ctrlDisplay.Text += "9";
 		}
 	}
 }
